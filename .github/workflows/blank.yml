@@ -1,4 +1,4 @@
-name: L
+name: Check
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  screenshot:
+  check:
     runs-on: windows-latest
 
     steps:
@@ -38,5 +38,5 @@ jobs:
           npm install playwright playwright-extra puppeteer-extra-plugin-stealth
           npx playwright install chromium
 
-      - name: Run screenshot script
+      - name: Run check script
         run: node index.js
