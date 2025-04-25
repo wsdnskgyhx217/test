@@ -20,7 +20,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install playwright playwright-extra
+        run: npm install playwright playwright-extra puppeteer-extra-plugin-stealth
 
       - name: Run screenshot script
         run: node index.js
