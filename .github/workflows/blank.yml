@@ -1,6 +1,9 @@
 name: Screenshot on Windows
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -21,3 +24,9 @@ jobs:
 
       - name: Run screenshot script
         run: node index.js
+
+      - name: Upload screenshot
+        uses: actions/upload-artifact@v3
+        with:
+          name: screenshot
+          path: screenshot.png
